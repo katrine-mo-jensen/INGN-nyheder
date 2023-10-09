@@ -1,0 +1,27 @@
+nav {
+  width: 100%;
+  .navBar {
+    max-width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--snowWhite);
+    a {
+      text-decoration: none;
+    }
+    h1 {
+      font-family: var(--logoFont);
+      color: var(--redApple);
+    }
+    .navLinks {
+      font-family: var(--textFont);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      a {
+        text-decoration: none;
+        color: var(--blackEye);
+      }
+    }
+  }
+}

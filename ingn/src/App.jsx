@@ -3,12 +3,12 @@ import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { MainLayout } from "./layout/MainLayout";
 import { HomePage } from "./pages/HomePage";
-import { InternationalPage } from "./pages/InternationalPage";
-import { NationalPage } from "./pages/NationalPage";
-import { PoliticsPage } from "./pages/PoliticsPage";
-import { SocietyPage } from "./pages/SocietyPage";
-import { SportsPage } from "./pages/SportPage";
-import { TechnologyPage } from "./pages/TechnologyPage";
+import { InternationalPage } from "./pages/categories/InternationalPage";
+import { NationalPage } from "./pages/categories/NationalPage";
+import { PoliticsPage } from "./pages/categories/PoliticsPage";
+import { SocietyPage } from "./pages/categories/SocietyPage";
+import { SportsPage } from "./pages/categories/SportsPage";
+import { TechnologyPage } from "./pages/categories/TechnologyPage";
 
 function App() {
   const queryClient = new QueryClient();

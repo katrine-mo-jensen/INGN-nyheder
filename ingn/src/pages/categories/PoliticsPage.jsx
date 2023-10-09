@@ -1,12 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import { request } from "graphql-request";
 import { Link } from "react-router-dom";
-import { getAll } from "../queries/all";
+import { getPolitics } from "../../queries/politics";
 
-export const HomePage = () => {
+export const PoliticsPage = () => {
   const { data, isLoading, error } = useQuery({
-    queryKey: ["giveMeAll"],
-    queryFn: async () => request(import.meta.env.VITE_PUBLIC_URL_ID, getAll),
+    queryKey: ["giveMePolitics"],
+    queryFn: async () =>
+      request(import.meta.env.VITE_PUBLIC_URL_ID, getPolitics),
   });
 
   console.log(data);

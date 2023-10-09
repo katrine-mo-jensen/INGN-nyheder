@@ -1,12 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import { request } from "graphql-request";
 import { Link } from "react-router-dom";
-import { getAll } from "../queries/all";
+import { getSociety } from "../../queries/society";
 
-export const HomePage = () => {
+export const SocietyPage = () => {
   const { data, isLoading, error } = useQuery({
-    queryKey: ["giveMeAll"],
-    queryFn: async () => request(import.meta.env.VITE_PUBLIC_URL_ID, getAll),
+    queryKey: ["giveMeSociety"],
+    queryFn: async () =>
+      request(import.meta.env.VITE_PUBLIC_URL_ID, getSociety),
   });
 
   console.log(data);
