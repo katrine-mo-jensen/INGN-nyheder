@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "../navigation/navigation.module.scss";
+import { AiOutlineMenu } from 'react-icons/ai'
 
 export const Navigation = () => {
   return (
@@ -16,6 +17,9 @@ export const Navigation = () => {
           <Link to="/sport">Sport</Link>
           <Link to="/politik">Politik</Link>
           <Link to="/samfund">Samfund</Link>
+        </div>
+        <div className={style.burgerMenu}>
+          <AiOutlineMenu/>
         </div>
       </div>
     </nav>

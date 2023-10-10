@@ -8,6 +8,7 @@ query National {
     image {
       url
     }
+    descriptionOfImage
     content {
       html
     }

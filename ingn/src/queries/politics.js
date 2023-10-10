@@ -8,6 +8,7 @@ query Politics {
     image {
       url
     }
+    descriptionOfImage
     content {
       html
     }

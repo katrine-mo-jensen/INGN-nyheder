@@ -28,7 +28,7 @@ export const NationalPage = () => {
             <p>
               D. {item.date} - af {item.author}
             </p>
-            <img src={item.image.url} alt="" />
+            <img src={item.image.url} alt={item.descriptionOfImage} />
             <Link to={`/${item.id}`}>Læs mere</Link>
           </article>
         );

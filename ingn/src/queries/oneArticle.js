@@ -10,6 +10,7 @@ query OneArticle($id: ID) {
       image {
         url
       }
+      descriptionOfImage
     }
   }
   

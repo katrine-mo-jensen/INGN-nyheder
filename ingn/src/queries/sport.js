@@ -8,6 +8,7 @@ query Sport {
     image {
       url
     }
+    descriptionOfImage
     content {
       html
     }

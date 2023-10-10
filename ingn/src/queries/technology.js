@@ -8,6 +8,7 @@ query Technology {
     image {
       url
     }
+    descriptionOfImage
     content {
       html
     }

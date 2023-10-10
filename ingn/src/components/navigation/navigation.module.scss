@@ -1,17 +1,23 @@
 nav {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--snowWhite);
+  margin-bottom: 20px;
   .navBar {
-    max-width: 1080px;
-    display: flex;
-    justify-content: space-between;
+    max-width: 1230px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     background-color: var(--snowWhite);
     a {
       text-decoration: none;
+      font-size: 1.5rem;
     }
     h1 {
       font-family: var(--logoFont);
       color: var(--redApple);
+      font-size: 2.8125rem;
     }
     .navLinks {
       font-family: var(--textFont);
@@ -21,7 +27,16 @@ nav {
       a {
         text-decoration: none;
         color: var(--blackEye);
+        border-left: solid black 2px;
+        padding-left: 20px;
       }
+      a:last-child {
+        border-right: solid black 2px;
+        padding-right: 20px;
+      }
+    }
+    .burgerMenu {
+      display: none;
     }
   }
 }

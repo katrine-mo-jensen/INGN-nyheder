@@ -1,24 +1,30 @@
 footer {
-    width: 100%;
-    background-color: var(--snowWhite);
-    .footer {
-        max-width: 1080px;
-        display: flex;
-        justify-content: space-between;
-        .links, .politik {
-            display: flex;
-            flex-direction: column;
-        }
-        h6{
-            font-size: 1rem;
-            padding-bottom: 23px;
-        }
-        p {
-            font-size: 1rem;
-        }
-        a {
-            text-decoration: none;
-            color: var(--blackEye);
-        }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--snowWhite);
+  .footer {
+    max-width: 1230px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 100px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    .links,
+    .politik {
+      display: flex;
+      flex-direction: column;
     }
+    h6 {
+      font-size: 1rem;
+      padding-bottom: 23px;
+    }
+    p {
+      font-size: 1rem;
+    }
+    a {
+      text-decoration: none;
+      color: var(--blackEye);
+    }
+  }
 }

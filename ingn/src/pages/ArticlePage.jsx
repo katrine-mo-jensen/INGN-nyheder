@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { request } from "graphql-request";
 import { useParams } from "react-router-dom";
 import { oneArticle } from "../queries/oneArticle";
+import style from "../pages/articlePage.module.scss";
 
 export const OneArticle = () => {
   const { id } = useParams();
@@ -22,15 +23,17 @@ export const OneArticle = () => {
     return <p>Error: {error.message}</p>;
   }
   return (
-    <article>
-      <img src={data.ingnContent.image.url} alt="" />
-      <h2>{data.ingnContent.title}</h2>
-      <p>
-        D. {data.ingnContent.date} - af {data.ingnContent.author}
-      </p>
-      <section
+    <article className={style.oneArticle}>
+      <img src={data.ingnContent.image.url} alt={data.ingnContent.descriptionOfImage} />
+      <div className={style.titleAndDate}>
+        <h2>{data.ingnContent.title}</h2>
+        <p>
+          D. {data.ingnContent.date} - af {data.ingnContent.author}
+        </p>
+      </div>
+      <section className={style.content}
         dangerouslySetInnerHTML={{ __html: data.ingnContent.content.html }}
-      ></section>
+      />
     </article>
   );
 };

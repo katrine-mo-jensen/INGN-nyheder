@@ -8,6 +8,7 @@ query Society {
     image {
       url
     }
+    descriptionOfImage
     content {
       html
     }

@@ -8,6 +8,7 @@ query International {
     image {
       url
     }
+    descriptionOfImage
     content {
       html
     }
