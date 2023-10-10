@@ -21,7 +21,7 @@ export const HomePage = () => {
   }
   return (
     <section className={style.articleWrapper}>
-      {data.ingnContents.map((item, index) => {
+      {data.ingnContents.slice(0, 9).map((item, index) => {
         const classNames = [
           style.art1,
           style.art2,
@@ -32,13 +32,8 @@ export const HomePage = () => {
           style.art7,
           style.art8,
           style.art9,
-          style.art10,
-          style.art11,
-          style.art12,
-          // Add more class names as needed
         ];
 
-        // Ensure that index does not go out of bounds of classNames array
         const className = classNames[index % classNames.length];
 
         return (
