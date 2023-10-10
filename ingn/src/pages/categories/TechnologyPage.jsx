@@ -29,7 +29,7 @@ export const TechnologyPage = () => {
               D. {item.date} - af {item.author}
             </p>
             <img src={item.image.url} alt="" />
-            <Link>Læs mere</Link>
+            <Link to={`/${item.id}`}>Læs mere</Link>
           </article>
         );
       })}

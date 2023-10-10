@@ -1,9 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { request } from "graphql-request";
-import { Link } from "react-router-dom";
+import { Link  } from "react-router-dom";
 import { getAll } from "../queries/all";
 
 export const HomePage = () => {
+  
+
   const { data, isLoading, error } = useQuery({
     queryKey: ["giveMeAll"],
     queryFn: async () => request(import.meta.env.VITE_PUBLIC_URL_ID, getAll),
@@ -28,7 +30,7 @@ export const HomePage = () => {
               D. {item.date} - af {item.author}
             </p>
             <img src={item.image.url} alt="" />
-            <Link>Læs mere</Link>
+            <Link to={`/${item.id}`}>Læs mere</Link>
           </article>
         );
       })}

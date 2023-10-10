@@ -9,6 +9,7 @@ import { PoliticsPage } from "./pages/categories/PoliticsPage";
 import { SocietyPage } from "./pages/categories/SocietyPage";
 import { SportsPage } from "./pages/categories/SportsPage";
 import { TechnologyPage } from "./pages/categories/TechnologyPage";
+import { OneArticle } from "./pages/ArticlePage";
 
 function App() {
   const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ function App() {
             <Route path="/samfund" element={<SocietyPage />} />
             <Route path="/sport" element={<SportsPage />} />
             <Route path="/teknologi" element={<TechnologyPage />} />
+            <Route path="/:id" element={<OneArticle />} />
           </Route>
         </Routes>
       </BrowserRouter>
