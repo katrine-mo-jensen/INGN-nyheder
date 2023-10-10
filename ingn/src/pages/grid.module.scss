@@ -1,3 +1,5 @@
+// Desktop Version
+
 .articleWrapper {
   max-width: 1230px;
   margin: auto;
@@ -46,3 +48,21 @@
     }
   }
 }
+
+
+// Mobile version 
+$mobile: 500px;
+
+
+  @media screen and (max-width: $mobile) { 
+    .articleWrapper {
+      display: flex;
+      flex-direction: column;
+      .art6 {
+        display: unset;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
