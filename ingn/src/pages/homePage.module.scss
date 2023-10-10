@@ -1,0 +1,24 @@
+.articleWrapper {
+  max-width: 1230px;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+  "article1 article1 article1 article1"
+  "article1 article1 article1 article1"
+  "article2 article2 article3 article3"
+  "article2 article2 article4 article4"
+  "article5 article5 article4 article4"
+  "article6 article6 article6 article6"
+  "article7 article7 article7 article7"
+  "article8 article8 article9 article9";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  article {
+    img {
+      max-width: 100%;
+    }
+  }
+  .article6 {
+    border: black;
+  }
+}

@@ -1,11 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { request } from "graphql-request";
-import { Link  } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { getAll } from "../queries/all";
+import style from "../pages/homePage.module.scss";
 
 export const HomePage = () => {
-  
-
   const { data, isLoading, error } = useQuery({
     queryKey: ["giveMeAll"],
     queryFn: async () => request(import.meta.env.VITE_PUBLIC_URL_ID, getAll),
@@ -21,10 +20,10 @@ export const HomePage = () => {
     return <p>Error: {error.message}</p>;
   }
   return (
-    <>
+    <section className={style.articleWrapper}>
       {data.ingnContents.map((item, index) => {
         return (
-          <article key={index}>
+          <article key={index} style={{gridArea: "article" + (index + 1)}} >
             <h2>{item.title}</h2>
             <p>
               D. {item.date} - af {item.author}
@@ -34,6 +33,6 @@ export const HomePage = () => {
           </article>
         );
       })}
-    </>
+    </section>
   );
 };
