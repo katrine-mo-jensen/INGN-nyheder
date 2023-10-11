@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { request } from "graphql-request";
 import { Link } from "react-router-dom";
 import { getInternational } from "../../queries/international";
-import style from "../../pages/grid.module.scss"
+import style from "../../pages/grid.module.scss";
 
 export const InternationalPage = () => {
   const { data, isLoading, error } = useQuery({
@@ -53,7 +53,7 @@ export const InternationalPage = () => {
               <p>
                 D. {item.date} - af {item.author}
               </p>
-              <Link to={`/${item.id}`}>Læs mere</Link>
+              <Link to={`/article/${item.id}`}>Læs mere</Link>
             </div>
             <img src={item.image.url} alt={item.descriptionOfImage} />
           </article>

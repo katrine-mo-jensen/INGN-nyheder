@@ -10,6 +10,7 @@ import { SocietyPage } from "./pages/categories/SocietyPage";
 import { SportsPage } from "./pages/categories/SportsPage";
 import { TechnologyPage } from "./pages/categories/TechnologyPage";
 import { OneArticle } from "./pages/ArticlePage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 
 function App() {
   const queryClient = new QueryClient();
@@ -26,7 +27,8 @@ function App() {
             <Route path="/samfund" element={<SocietyPage />} />
             <Route path="/sport" element={<SportsPage />} />
             <Route path="/teknologi" element={<TechnologyPage />} />
-            <Route path="/:id" element={<OneArticle />} />
+            <Route path="/article/:id" element={<OneArticle />} />
+            <Route path="/*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
