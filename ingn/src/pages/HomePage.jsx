@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { request } from "graphql-request";
 import { Link } from "react-router-dom";
 import { getAll } from "../queries/all";
-import style from "../pages/grid.module.scss";
+import style from "../pages/homePage.module.scss";
 
 export const HomePage = () => {
   const { data, isLoading, error } = useQuery({
