@@ -1,8 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { request } from "graphql-request";
-import { Link } from "react-router-dom";
+
 import { getInternational } from "../../queries/international";
 import style from "../../pages/grid.module.scss";
+import { CategoryArticles } from "../../components/props/categoryArticles";
+
+
 
 export const InternationalPage = () => {
   const { data, isLoading, error } = useQuery({
@@ -22,7 +25,7 @@ export const InternationalPage = () => {
   }
   return (
     <section className={style.articleWrapper}>
-      
+      <CategoryArticles articleList={data}  /> 
     </section>
   );
 };
