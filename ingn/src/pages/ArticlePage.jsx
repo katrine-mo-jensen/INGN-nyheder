@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { request } from "graphql-request";
-import { redirect, useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { oneArticle } from "../queries/oneArticle";
 import style from "../pages/articlePage.module.scss";
 
