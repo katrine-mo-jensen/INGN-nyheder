@@ -1,27 +1,14 @@
-import { useQuery } from "@tanstack/react-query";
-import { request } from "graphql-request";
+import style from '../../pages/grid.module.scss'
 import { Link } from "react-router-dom";
-import { getAll } from "../queries/all";
-import style from "../pages/homePage.module.scss";
 
-export const HomePage = () => {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["giveMeAll"],
-    queryFn: async () => request(import.meta.env.VITE_PUBLIC_URL_ID, getAll),
-  });
+export const CategoryArticles = (props) => {
+    const data = props.articleList;
 
-  console.log(data);
-
-  if (isLoading) {
-    return <p>Loading... </p>;
-  }
-
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
-  return (
-    <section className={style.articleWrapper}>
-      {data.ingnContents.slice(0, 9).map((item, index) => {
+    console.log(props, data)
+    
+    return (
+        <div className={style.categoryArticles}>
+            {data.ingnContents.map((item, index) => {
         const classNames = [
           style.art1,
           style.art2,
@@ -32,6 +19,9 @@ export const HomePage = () => {
           style.art7,
           style.art8,
           style.art9,
+          style.art10,
+          style.art11,
+          style.art12,
         ];
 
         const className = classNames[index % classNames.length];
@@ -53,6 +43,7 @@ export const HomePage = () => {
           </article>
         );
       })}
-    </section>
-  );
-};
+        </div>
+
+    )
+}
