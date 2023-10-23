@@ -8,6 +8,7 @@
   background-color: var(--snowWhite);
   display: flex;
   justify-content: center;
+  
   .navigation {
     max-width: 1230px;
     display: grid;
@@ -24,6 +25,7 @@
     ul {
       display: flex;
       gap: 20px;
+      
       li {
         list-style-type: none;
         border-left: solid black 2px;
